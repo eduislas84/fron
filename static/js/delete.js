@@ -38,7 +38,7 @@ function getContactById(email) {
     }
 
     const request = new XMLHttpRequest();
-    request.open('GET', "https://back-heroku-cb17d0009ad0.herokuapp.com/contactos/" + email);
+    request.open('GET', "https://backendxd-4eb98d5ef344.herokuapp.com/contactos/" + email);
     request.setRequestHeader('Authorization', `Bearer ${token}`);
     request.send();
 
@@ -79,7 +79,7 @@ function deleteData(email) {
     }
 
     const request = new XMLHttpRequest();
-    request.open('DELETE', "https://back-heroku-cb17d0009ad0.herokuapp.com/contactos/" + email, true);
+    request.open('DELETE', "https://backendxd-4eb98d5ef344.herokuapp.com/contactos/" + email, true);
     request.setRequestHeader('Authorization', `Bearer ${token}`);
 
     request.onload = function () {
