@@ -18,19 +18,19 @@
 
 /* Estilo para las cabeceras de la tabla */
 .datagrid th {
-  background-color: #8A2BE2; /* Morado para las cabeceras */
+  background-color: #000080; /* Morado para las cabeceras */
   color: #FFFFFF;
   width: 25%; /* Establece el ancho igual para cada columna */
 }
 
 /* Estilos para las celdas pares de la tabla */
 .datagrid tr:nth-child(even) {
-  background-color: #D8BFD8; /* Morado más claro para las celdas pares */
+  background-color: #0000FF; /* Morado más claro para las celdas pares */
 }
 
 /* Estilos para las celdas impares de la tabla */
 .datagrid tr:nth-child(odd) {
-  background-color: #E6E6FA; /* Morado claro para las celdas impares */
+  background-color: #0000FF; /* Morado claro para las celdas impares */
 }
 
 /* Estilos para las celdas de datos */
@@ -62,5 +62,5 @@
 }
 
 .button:hover {
-  background: #7B1FA2; /* Morado más oscuro al pasar el cursor sobre el botón */
+  background: #000080; /* Morado más oscuro al pasar el cursor sobre el botón */
 }
