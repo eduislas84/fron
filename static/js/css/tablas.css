@@ -25,12 +25,12 @@
 
 /* Estilos para las celdas pares de la tabla */
 .datagrid tr:nth-child(even) {
-  background-color: #0000FF; /* Morado más claro para las celdas pares */
+  background-color: #F7DCC7; /* Morado más claro para las celdas pares */
 }
 
 /* Estilos para las celdas impares de la tabla */
 .datagrid tr:nth-child(odd) {
-  background-color: #0000FF; /* Morado claro para las celdas impares */
+  background-color: #F7DCC7; /* Morado claro para las celdas impares */
 }
 
 /* Estilos para las celdas de datos */
