@@ -1,4 +1,4 @@
-const SERVER_URL = "ttps://backendxd-4eb98d5ef344.herokuapp.com";
+const SERVER_URL = "https://backendxd-4eb98d5ef344.herokuapp.com";
 const ENDPOINT = "/contactos/"
 
 async function insertData(email, nombre, telefono) {
