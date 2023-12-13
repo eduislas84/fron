@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Insertar contacto</title>
+    <link rel="stylesheet" href="../static/js/css/insertar.css">
+    <script type="text/javascript" src="../static/js/post.js"></script>
+</head>
+<body>
+    <div class="center-content">
+        <h1>Insertar Contacto</h1>
+        <label for="text">Nombre</label>
+        <input type="text" id="nombreInput" class="input" placeholder="Ingrese el Nombre">
+        <label for="text">Correo</label>
+        <input type="email" id="emailInput" class="input" placeholder="Ingrese el Correo">
+        <label for="text">Teléfono</label>
+        <input type="tel" id="telefonoInput" class="input" placeholder="Ingrese el Teléfono">
+        <div class="button-container">
+            <button onclick="insertContact()" class="button">Ingresar</button>
+            <button onclick="cancelar()" class="button">Cancelar</button>
+        </div>
+    </div>
+
+    <script>
+        function cancelar() {
+            window.location.href = "/inicio";
+        }
+
+        async function insertContact() {
+            var emailInput = document.getElementById("emailInput");
+            var nombreInput = document.getElementById("nombreInput");
+            var telefonoInput = document.getElementById("telefonoInput");
+            var email = emailInput.value;
+            var nombre = nombreInput.value;
+            var telefono = telefonoInput.value;
+
+            await insertData(email, nombre, telefono);
+        }
+
+        async function checkServerStatus() {
+            try {
+                const response = await fetch('https://back-heroku-cb17d0009ad0.herokuapp.com/', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': 'Bearer ' + sessionStorage.getItem('token')
+                    }
+                });
+                if (response.status === 401) {
+                    window.location.href = "/login";
+                }
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('statusMessage').innerText = `Server response: ${data.message}`;
+                } else {
+                    const errorData = await response.json();
+                    console.error('Error checking server status:', errorData);
+                    document.getElementById('statusMessage').innerText = `Error: ${errorData.message}`;
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('statusMessage').innerText = 'Error checking server status';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', checkServerStatus);
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* Estilos para la tabla */
+.table-container {
+  width: 80%;
+  text-align: center; /* Centra horizontalmente el contenido de la tabla */
+  margin-top: 15%; /* Centra la tabla verticalmente en la mitad de la página */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.datagrid {
+  font-size: 16px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Estilo para las cabeceras de la tabla */
+.datagrid th {
+  background-color: #8A2BE2; /* Morado para las cabeceras */
+  color: #FFFFFF;
+  width: 33.33%; /* Establece el ancho igual para cada columna */
+}
+
+/* Estilos para las celdas pares de la tabla */
+.datagrid tr:nth-child(even) {
+  background-color: #D8BFD8; /* Morado más claro para las celdas pares */
+}
+
+/* Estilos para las celdas impares de la tabla */
+.datagrid tr:nth-child(odd) {
+  background-color: #E6E6FA; /* Morado claro para las celdas impares */
+}
+
+/* Estilos para las celdas de datos */
+.datagrid td {
+  width: 33.33%; /* Establece el ancho igual para cada columna de datos */
+  padding: 10px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+/* Estilos para el botón */
+.button {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #8A2BE2; /* Morado para el botón */
+  color: #FFFFFF;
+  border: 1px solid #8A2BE2; /* Borde morado para el botón */
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin: 0 10px;
+  font-size: 20px;
+  margin-top: 5%;
+}
+
+.button:hover {
+  background: #7B1FA2; /* Morado más oscuro al pasar el cursor sobre el botón */
+}
